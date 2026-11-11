@@ -7,6 +7,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="apple-touch-icon" sizes="180x180" href="zl-logo.png">
+<link rel="icon" type="image/png" sizes="32x32" href="zl-logo.png">
+<link rel="icon" type="image/png" sizes="16x16" href="zl-logo.png">
 <style>
 :root{
   --bg:#020203;
@@ -264,17 +267,26 @@ nav a:hover{opacity:1;color:var(--accent);text-shadow:0 0 10px var(--accent)}
 select.form-control option { background: #111; color: #fff; }
 footer{padding:60px 0;text-align:center;color:var(--muted);font-size:13px;border-top:1px solid rgba(176,102,255,0.15);position:relative;z-index:2}
 @media(max-width:768px){
-  body { overflow-x: hidden; width: 100%; }
-  .hero h2{font-size:28px}
-  .hero p{font-size:15px}
-  .products{display: flex; flex-direction: column; gap: 20px; width: 100%; padding: 0; margin: 0;}
-  .product{width: 100%; max-width: 100%; margin: 0;}
-  .form-card{padding: 20px; width: 100%; border-radius: 20px;}
-  .form-grid{grid-template-columns:1fr; gap: 15px;}
-  .form-group.full{grid-column:span 1}
-  .section{padding: 0 12px; margin: 25px auto; width: 100%; box-sizing: border-box;}
-  .nav{padding: 10px 12px; width: 100%;}
-  .brand h1{font-size: 16px;}
+  html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; position: relative; }
+  header { position: sticky; width: 100%; top: 0; }
+  .nav { padding: 10px; flex-direction: column; gap: 10px; align-items: center; text-align: center; }
+  .brand { flex-direction: column; gap: 5px; }
+  .brand h1 { font-size: 20px; }
+  nav { width: 100%; justify-content: center; gap: 20px; border-top: 1px solid rgba(176,102,255,0.1); padding-top: 10px; }
+  .hero h2 { font-size: 26px; padding: 0 10px; }
+  .hero p { font-size: 14px; padding: 0 15px; }
+  .products { display: flex; flex-direction: column; align-items: center; gap: 25px; width: 100%; padding: 0 10px; margin: 0 auto; box-sizing: border-box; }
+  .product { width: 100%; max-width: 360px; margin: 0 auto; }
+  .section { padding: 0 10px; margin: 30px auto; width: 100%; box-sizing: border-box; overflow: hidden; }
+
+  /* Fix Order Form Table on Mobile */
+  .form-card { padding: 25px 15px; width: 100%; border-radius: 20px; box-sizing: border-box; }
+  .form-grid { display: flex; flex-direction: column; gap: 15px; width: 100%; }
+  .form-group { width: 100% !important; text-align: right; }
+  .form-group.full { grid-column: auto; }
+  .form-control { width: 100%; font-size: 16px; padding: 12px; box-sizing: border-box; }
+
+  .insta-slider { height: 240px; }
 }
 </style>
 </head>
